@@ -8,14 +8,10 @@ import  ncpc from '../../images/ncpc.jpg'
 const Header = () => {
     return (
         <div className='header'>
-            <nav className='test'>
-                <a href='/home'>Home</a>
-                <a href='/dataStructure'>Data Structure</a>
-                <a href='/algorithm'>Algorithm</a>
-            </nav>
+          
             <Carousel>
                 <Carousel.Item interval={1000}>
-                    <img  src={icpc} style={{'max-height': '80vh'}}  className="d-block w-100 "  alt="First slide" >  
+                    <img  src={icpc} style={{'maxHeight': '80vh'}}  className="d-block w-100 "  alt="First slide" >  
                     </img>
                     <Carousel.Caption>
                         <h3>First slide label</h3>
@@ -23,7 +19,7 @@ const Header = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
-                <img  src={ncpc} style={{'max-height': '80vh'}}  className="d-block w-100 "  alt="Second slide" >  
+                <img  src={ncpc} style={{'maxHeight': '80vh'}}  className="d-block w-100 "  alt="Second slide" >  
                     </img>
                     <Carousel.Caption>
                         <h3>Second slide label</h3>
@@ -31,7 +27,7 @@ const Header = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
-                <img  src={intra} style={{'max-height': '80vh'}}  className="d-block w-100 "  alt="Third slide" >  
+                <img  src={intra} style={{'maxHeight': '80vh'}}  className="d-block w-100 "  alt="Third slide" >  
                     </img>
                     <Carousel.Caption>
                         <h3>Third slide label</h3>
