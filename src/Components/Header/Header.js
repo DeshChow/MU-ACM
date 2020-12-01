@@ -9,6 +9,7 @@ const Header = () => {
     return (
         <div className='header'>
           
+         
             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img  src={icpc} style={{'maxHeight': '80vh'}}  className="d-block w-100 "  alt="First slide" >  
@@ -35,6 +36,7 @@ const Header = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+           
 
         </div>
     );
