@@ -5,14 +5,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom';
 
 const FullCard = (props) => {
+  
+      
+    const {header,detail,topic}=props.data;
 
-    const {header,detail}=props.data;
+    
 
     const history=useHistory();
 
     const handleClick=()=>{
 
-        history.push('/details');
+     history.push('Details'+topic);
     }
     return (
         <Card  className="text-center CardStyle">
