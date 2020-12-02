@@ -20,11 +20,11 @@ const AlgoDetails = (props) => {
             <div >
             <div className="sidebar">
             <a  class="active" >Data Strcuture</a>
-            <a onClick={()=>handleClick('array')}>Array</a>
-            <a onClick={()=>handleClick('stack')}>Stack</a>
-            <a onClick={()=>handleClick('queue')}>Queue</a>
-            <a onClick={()=>handleClick('linkedlist')}>Linked List</a>
-            <a onClick={()=>handleClick('graph')}>Graph</a>
+            <a onClick={()=>handleClick('binarysearch')}>Binary Search</a>
+            <a onClick={()=>handleClick('bubblesort')}>Bubble Sort</a>
+            <a onClick={()=>handleClick('bfs')}>BFS</a>
+            <a onClick={()=>handleClick('dfs')}>DFS</a>
+            <a onClick={()=>handleClick('segmenttree')}>Segment Tree</a>
            
             
           </div>

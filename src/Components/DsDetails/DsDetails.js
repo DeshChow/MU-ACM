@@ -16,10 +16,15 @@ const DsDetails = (props) => {
             <p>{data.Description1}</p>
             <br></br>
             <img className="ima" src={data.Img}></img>
-             <html>{data.Description2}</html>
+            <br></br>
+            <p>{data.Description2}</p>
+            
             <p>{data.Description3}</p>
+         
             <p>{data.Description4}</p>
+           
             <p>{data.Description5}</p>
+            
             <div className="code">
                 <p>This is shojib</p>
 
