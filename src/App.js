@@ -15,7 +15,7 @@ import Algorithm from './Components/Algorithm/Algorithm';
 import { Nav } from 'react-bootstrap';
 import NavBar from './Components/NavBar/NavBar';
 import Details from './Components/Details/Details';
-import { createContext } from 'react';
+import { createContext, useState } from 'react';
 import AlgoDetails from './Components/AlgoDetails/AlgoDetails';
 
 
@@ -180,11 +180,19 @@ Complexity : 'O(n)'
 
 
 ]
+
+export const UserContext=createContext();
 function App() {
+
+  const [userTopic,setUserTopic] = useState({
+    dsID:'array',
+    algoID:'binarysearch'
+  })
   return (
 
     <div >
 
+<UserContext.Provider value={[userTopic,setUserTopic]}>
 
       <Router>
 
@@ -234,7 +242,7 @@ function App() {
         </Switch>
       </Router>
 
-
+      </UserContext.Provider>
 
     </div>
 

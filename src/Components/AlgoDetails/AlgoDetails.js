@@ -1,11 +1,26 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
 import './AlgoDetails.css'
 const AlgoDetails = (props) => {
    
         const dataDS=props.dataALGO;
 
+        const [userTopic,setUserTopic] = useContext(UserContext);
+
         const [currentData,setCurrentData]=useState([props.dataALGO[0]]);
+
+        useEffect(() => {
+
+            const id=userTopic.algoID;
+      
+            const newCurrentData=dataDS.filter(data=> (data.id.toLowerCase()==id.toLowerCase()));
+      
+          //  console.log(430,id,newCurrentData);
+      
+            setCurrentData(newCurrentData);
+      
+          },[userTopic])
     
         const handleClick=(id)=>
         {
@@ -13,6 +28,7 @@ const AlgoDetails = (props) => {
     
               setCurrentData(newCurrentData);
         }
+       
         return (
             
             <div>

@@ -1,21 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import './FullCard.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useHistory } from 'react-router-dom';
+import { UserContext } from '../../App';
 
 const FullCard = (props) => {
   
       
-    const {header,detail,topic}=props.data;
+    const {header,detail,topic,id}=props.data;
+
+    const [userTopic,setUserTopic] = useContext(UserContext);
+
+    console.log('fullcard ID : ',id,header,detail,topic);
+
 
     
 
     const history=useHistory();
 
-    const handleClick=()=>{
+    const handleClick=(currentData)=>{
 
      history.push('Details'+topic);
+
+     const currentUserTopic={...userTopic};
+
+        if(topic=='ds')
+        {
+          
+            currentUserTopic.dsID=currentData;
+        }
+        else
+        {
+            currentUserTopic.algoID=currentData;
+        }
+
+        setUserTopic(currentUserTopic);
     }
     return (
         <Card  className="text-center CardStyle">
@@ -26,7 +46,7 @@ const FullCard = (props) => {
           <Card.Text>
             {detail}
           </Card.Text>
-          <Button onClick={handleClick}variant="dark">Read More</Button>
+          <Button onClick={()=>handleClick(id)}variant="dark">Read More</Button>
         </Card.Body>
       
       </Card>

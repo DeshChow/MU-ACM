@@ -5,7 +5,9 @@ const DsDetails = (props) => {
 
     const data = props.data[0];
 
-    console.log(data.Description2);
+    //console.log(data.Description2);
+
+    console.log(data);
 
     return (
         <div>

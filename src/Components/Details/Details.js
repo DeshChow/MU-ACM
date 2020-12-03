@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
 import './Details.css'
 
@@ -7,7 +8,23 @@ const Details = (props) => {
    
     const dataDS=props.dataDS;
 
+    const [userTopic,setUserTopic] = useContext(UserContext);
+
+    console.log(userTopic);
+
     const [currentData,setCurrentData]=useState([props.dataDS[0]]);
+
+    useEffect(() => {
+
+      const id=userTopic.dsID;
+
+      const newCurrentData=dataDS.filter(data=> (data.id.toLowerCase()==id.toLowerCase()));
+
+      console.log(430,id,newCurrentData);
+
+      setCurrentData(newCurrentData);
+
+    },[userTopic])
 
     const handleClick=(id)=>
     {
