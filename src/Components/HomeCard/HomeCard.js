@@ -11,13 +11,16 @@ const HomeCard = (props) => {
 
 
     return (
-        <CardGroup>
-             
-             {
-      data.map(cardData => <SingleCard cardData={cardData} key={cardData.header} ></SingleCard>)
-             }
 
-        </CardGroup>
+        <div>
+            <CardGroup>
+
+                {
+                    data.map(cardData => <SingleCard cardData={cardData} key={cardData.header} ></SingleCard>)
+                }
+
+            </CardGroup>
+        </div>
 
     );
 };

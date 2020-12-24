@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
 import './AlgoDetails.css'
@@ -10,15 +11,21 @@ const AlgoDetails = (props) => {
 
         const [currentData,setCurrentData]=useState([props.dataALGO[0]]);
 
+        const {id}=useParams();
+
+        const history=useHistory();
+
         useEffect(() => {
 
-            const id=userTopic.algoID;
+          //  const id=userTopic.algoID;
       
             const newCurrentData=dataDS.filter(data=> (data.id.toLowerCase()==id.toLowerCase()));
       
           //  console.log(430,id,newCurrentData);
       
             setCurrentData(newCurrentData);
+
+            console.log(newCurrentData);
       
           },[userTopic])
     
@@ -27,6 +34,8 @@ const AlgoDetails = (props) => {
               const newCurrentData=dataDS.filter(data=> (data.id==id));
     
               setCurrentData(newCurrentData);
+
+              history.replace('/Detailsalgo/'+id);
         }
        
         return (
@@ -35,7 +44,7 @@ const AlgoDetails = (props) => {
     
             <div >
             <div className="sidebar">
-            <a  class="active" >Data Strcuture</a>
+            <a  class="active" >Algorithm</a>
             <a onClick={()=>handleClick('binarysearch')}>Binary Search</a>
             <a onClick={()=>handleClick('bubblesort')}>Bubble Sort</a>
             <a onClick={()=>handleClick('bfs')}>BFS</a>

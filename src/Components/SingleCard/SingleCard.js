@@ -15,17 +15,21 @@ const SingleCard = (props) => {
 
     const handleClick=(currentData)=>
     {
-        history.push('/Details'+data.topic);
+       
         const currentUserTopic={...userTopic};
 
         if(data.topic=='ds')
         {
           
             currentUserTopic.dsID=currentData;
+
+            history.push('/Details/'+data.id);
         }
         else
         {
             currentUserTopic.algoID=currentData;
+
+            history.push('/Detailsalgo/'+data.id);
         }
 
         setUserTopic(currentUserTopic);

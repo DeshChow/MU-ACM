@@ -21,7 +21,7 @@ const FullCard = (props) => {
 
     const handleClick=(currentData)=>{
 
-     history.push('Details'+topic);
+     
 
      const currentUserTopic={...userTopic};
 
@@ -29,10 +29,14 @@ const FullCard = (props) => {
         {
           
             currentUserTopic.dsID=currentData;
+
+            history.push('/Details/'+id);
         }
         else
         {
             currentUserTopic.algoID=currentData;
+
+            history.push('Detailsalgo/'+id);
         }
 
         setUserTopic(currentUserTopic);

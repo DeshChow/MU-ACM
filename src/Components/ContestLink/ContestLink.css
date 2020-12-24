@@ -1,0 +1,36 @@
+.contestcard{
+    height: 500px;
+    margin: 10px 100px 10px 100px;
+    background-image: url('../../images/contestbackground.jpg');
+    background-size: cover;
+    border: 1px solid gray;
+}
+
+.contestcardnext{
+    background-color: powderblue;  
+    height: 400px;
+    width: 300px;
+    margin: 50px 100px 10px 100px;
+    padding: 20px;
+    border: 1px solid gray;
+
+}
+
+button.contestbtn{
+    border: 1px solid rgb(128, 209, 7);;
+    padding: 4px 14px;
+    background-color: rgb(128, 209, 7);
+    color: white;
+    flex: right;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: tahoma;
+    border-radius: 50px;
+    height: 35px;
+    width: 200px;
+    margin-left: 25px;
+  }
+
+  button.contestbtn:focus{
+    outline: none !important;
+ }

@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
 import './Details.css'
@@ -14,9 +15,13 @@ const Details = (props) => {
 
     const [currentData,setCurrentData]=useState([props.dataDS[0]]);
 
+    const {id}=useParams();
+
+    console.log(id);
+
     useEffect(() => {
 
-      const id=userTopic.dsID;
+      
 
       const newCurrentData=dataDS.filter(data=> (data.id.toLowerCase()==id.toLowerCase()));
 
@@ -26,9 +31,14 @@ const Details = (props) => {
 
     },[userTopic])
 
+
+      const history=useHistory();
+
     const handleClick=(id)=>
     {
           const newCurrentData=dataDS.filter(data=> (data.id==id));
+
+          history.replace('/Details/'+id);
 
           setCurrentData(newCurrentData);
     }
@@ -38,7 +48,7 @@ const Details = (props) => {
 
         <div >
         <div className="sidebar">
-        <a  class="active" >Data Strcuture</a>
+        <a  class="active" >DataStructure</a>
         <a onClick={()=>handleClick('array')}>Array</a>
         <a onClick={()=>handleClick('stack')}>Stack</a>
         <a onClick={()=>handleClick('queue')}>Queue</a>

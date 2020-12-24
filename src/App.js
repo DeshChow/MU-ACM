@@ -17,6 +17,9 @@ import NavBar from './Components/NavBar/NavBar';
 import Details from './Components/Details/Details';
 import { createContext, useState } from 'react';
 import AlgoDetails from './Components/AlgoDetails/AlgoDetails';
+import ContestLinkDetails from './Components/ContestLinkDetails/ContestLinkDetails';
+import ProgrammingSiteDetail from './Components/ProgrammingSiteDetail/ProgrammingSiteDetail';
+import MemoryDetail from './Components/MemoryDetail/MemoryDetail';
 
 
 const dataDS=[
@@ -210,18 +213,30 @@ function App() {
             <Algorithm></Algorithm>
 
           </Route>
-          <Route path="/Detailsds">
+          <Route path="/Details/:id">
                
                <Details dataDS={dataDS}></Details>
            
 
           </Route>
-          <Route path="/Detailsalgo">
+          <Route path="/Detailsalgo/:id">
                
               <AlgoDetails dataALGO={dataALGO}></AlgoDetails>
            
 
           </Route>
+          <Route path="/ContestLink">
+               
+              <ContestLinkDetails></ContestLinkDetails>
+           
+
+          </Route>
+          <Route path="/ProgrammingSite">
+               
+               <ProgrammingSiteDetail></ProgrammingSiteDetail>
+            
+ 
+           </Route>
          
           <Route path="/home">
                
@@ -229,6 +244,14 @@ function App() {
            
 
           </Route>
+
+          <Route path="/MUMemory">
+               
+              <MemoryDetail></MemoryDetail>
+                
+     
+               </Route>
+
           <Route exact path="/">
 
             <Home></Home>
