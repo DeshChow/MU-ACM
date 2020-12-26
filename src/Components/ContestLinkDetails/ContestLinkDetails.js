@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ContestLinkDetailsInner from '../ContestLinkDetailsInner/ContestLinkDetailsInner';
 
 const ContestLinkDetails = () => {
 
-    const data=[
+  /*  const data=[
  
         {
          name:'MU INTRA UNIVERSITY PROGRAMMING CONTEST',
@@ -74,7 +74,26 @@ const ContestLinkDetails = () => {
 
 
 
-   ];
+   ];*/
+
+      const [data,setData]=useState([]);
+
+
+      useEffect(() => {
+
+        fetch('http://localhost:5000/ContestLink')
+        .then(res=>res.json())
+           .then(result=>
+            {
+               console.log(result);
+
+               result.reverse();
+
+               setData(result)
+            })
+       
+      }, []);
+
 
    let cnt=0;
 

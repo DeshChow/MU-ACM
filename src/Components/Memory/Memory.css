@@ -1,0 +1,42 @@
+.memorycard{  
+    height: 500px;
+    width: 1060px;
+    margin: 10px 150px 10px 300px;
+    background-image: url('../../images/cup.jpg') ;
+    background-size: cover;
+    border: 1px solid gray;
+}
+
+#myelement{
+    
+}
+
+.memorycardnext{
+    background-color: palegoldenrod;  
+    height: 400px;
+    width: 300px;
+    margin: 50px 0px 10px 0px;
+    padding: 20px;
+    margin-left: -150px;
+    border: 1px solid gray;
+
+}
+
+button.memorycardbtn{
+    border: 1px solid blue;
+    padding: 4px 14px;
+    background-color: blue;
+    color: white;
+    flex: right;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: tahoma;
+    border-radius: 50px;
+    height: 35px;
+    width: 200px;
+    margin-left: 25px;
+  }
+
+  button.memorycardbtn:focus{
+    outline: none !important;
+ }
