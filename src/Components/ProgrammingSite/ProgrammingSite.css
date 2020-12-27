@@ -1,27 +1,25 @@
 .programmingsitecard{  
     height: 500px;
-    margin: 10px 100px 10px 100px;
+    width: 1060px;
+    margin: 10px 150px 10px 300px;
     background-image: url('../../images/programmingsite.png');
     background-size: cover;
-    border: 1px solid gray;
 }
 
 .programmingsitecardnext{
-    background-color: palegoldenrod;  
+    background-color: black;  
     height: 400px;
     width: 300px;
-    margin: 50px 100px 10px 100px;
+    margin: 50px 0px 10px 0px;
     padding: 20px;
-    margin-left: 920px;
-    border: 1px solid gray;
-
+    margin-left: -150px;
 }
 
 button.programmingsitebtn{
-    border: 1px solid blue;
+    border: 1px solid greenyellow;
     padding: 4px 14px;
-    background-color: blue;
-    color: white;
+    background-color: greenyellow;
+    color: black;
     flex: right;
     font-weight: 400;
     cursor: pointer;

@@ -2,30 +2,24 @@
     height: 500px;
     width: 1060px;
     margin: 10px 150px 10px 300px;
-    background-image: url('../../images/cup.jpg') ;
+    background-image: url('../../images/winner.jpg') ;
     background-size: cover;
-    border: 1px solid gray;
-}
-
-#myelement{
-    
 }
 
 .memorycardnext{
-    background-color: palegoldenrod;  
+    background-color: #4A0363;  
     height: 400px;
     width: 300px;
     margin: 50px 0px 10px 0px;
     padding: 20px;
     margin-left: -150px;
-    border: 1px solid gray;
-
+    
 }
 
 button.memorycardbtn{
-    border: 1px solid blue;
+    border: 1px solid  tomato;
     padding: 4px 14px;
-    background-color: blue;
+    background-color: tomato;
     color: white;
     flex: right;
     font-weight: 400;

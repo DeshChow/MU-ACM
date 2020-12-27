@@ -2,7 +2,8 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
-import './Details.css'
+import FootItem from '../FootItem/FootItem';
+import './Details.css';
 
 const Details = (props) => {
 
@@ -44,29 +45,43 @@ const Details = (props) => {
     }
     return (
         
-        <div>
+        <div className="row">
 
-        <div >
-        <div className="sidebar">
-        <a  class="active" >DataStructure</a>
-        <a onClick={()=>handleClick('array')}>Array</a>
-        <a onClick={()=>handleClick('stack')}>Stack</a>
-        <a onClick={()=>handleClick('queue')}>Queue</a>
-        <a onClick={()=>handleClick('linkedlist')}>Linked List</a>
-        <a onClick={()=>handleClick('graph')}>Graph</a>
+        
+        <div className="col-2" style={{backgroundColor: 'rgb(224, 224, 224)',height: '600px'}}>
+        <a><h2 style={{backgroundColor: '#4CAF50', color: 'white',width: '242px'}}>Data Structure</h2></a>
+        <a className="sidename" onClick={()=>handleClick('array')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Array</h4></a>
+  
+  
+        <a className="sidename"  onClick={()=>handleClick('stack')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Stack</h4></a>
+       
+       
+        <a className="sidename"  onClick={()=>handleClick('queue')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Queue</h4></a>
+       
+        <a className="sidename" onClick={()=>handleClick('linkedlist')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Linked List</h4></a>
+      
+     
+        <a className="sidename" onClick={()=>handleClick('graph')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Graph</h4></a>
        
         
       </div>
-      </div>
+    
       
      
-      <div className="content">
+      <div className="content col-10" style={{marginTop: '0px',marginLeft: '-60px'}}>
 
               <DsDetails data={currentData}></DsDetails>
 
     
       
       </div>
+
+
+      <FootItem></FootItem>
+
+
+
+
       </div>
 
      

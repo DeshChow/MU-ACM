@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import ContestLinkDetailsInner from '../ContestLinkDetailsInner/ContestLinkDetailsInner';
+import FootItem from '../FootItem/FootItem';
+import './ContestLinkDetails.css';
 
 const ContestLinkDetails = () => {
 
@@ -97,19 +100,44 @@ const ContestLinkDetails = () => {
 
    let cnt=0;
 
+   let history=useHistory();
+
+   const handleClick=()=>
+   {
+    history.push('/addAPost');
+   }
+
+   const isAvaible=()=>
+   {
+      if(data.length)return true;
+
+      else return false;
+   }
+
     return (
-        <div>
+       isAvaible() &&<div>
+            <div>
+                <br></br>
+                 <button onClick={handleClick} className="postbtn" style={{float: 'right', color: 'white', marginRight: '100px'}}>Add a Post</button>
+                 <br></br>
+            </div>
+
+            <div>
 
             {
 
                 data.map(d=>
-                <ContestLinkDetailsInner d={d} cnt={++cnt}></ContestLinkDetailsInner>
+                <ContestLinkDetailsInner key={d.name} d={d} cnt={++cnt}></ContestLinkDetailsInner>
                 
                 
                 )
             }
+            </div>
+
+            <FootItem></FootItem>
             
         </div>
+          
     );
 };
 

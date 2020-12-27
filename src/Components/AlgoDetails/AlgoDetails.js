@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
 import DsDetails from '../DsDetails/DsDetails';
+import FootItem from '../FootItem/FootItem';
 import './AlgoDetails.css'
 const AlgoDetails = (props) => {
    
@@ -40,29 +41,38 @@ const AlgoDetails = (props) => {
        
         return (
             
-            <div>
+            <div className='row' >
     
-            <div >
-            <div className="sidebar">
-            <a  class="active" >Algorithm</a>
-            <a onClick={()=>handleClick('binarysearch')}>Binary Search</a>
-            <a onClick={()=>handleClick('bubblesort')}>Bubble Sort</a>
-            <a onClick={()=>handleClick('bfs')}>BFS</a>
-            <a onClick={()=>handleClick('dfs')}>DFS</a>
-            <a onClick={()=>handleClick('segmenttree')}>Segment Tree</a>
-           
             
-          </div>
-          </div>
+    <div className="col-2" style={{backgroundColor: 'rgb(224, 224, 224)',height: '600px'}}>
+        <a><h2 style={{backgroundColor: '#4CAF50', color: 'white',width: '242px'}}>Algorithm</h2></a>
+        
+        <a className="sidename" onClick={()=>handleClick('binarysearch')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Binary Search</h4></a>
+  
+  
+        <a className="sidename"  onClick={()=>handleClick('bubblesort')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Bubble Sort</h4></a>
+       
+       
+        <a className="sidename"  onClick={()=>handleClick('bfs')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>BFS</h4></a>
+       
+        <a className="sidename" onClick={()=>handleClick('dfs')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>DFS</h4></a>
+      
+     
+        <a className="sidename" onClick={()=>handleClick('segmenttree')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Segment Tree</h4></a>
+       
+        
+      </div>
           
          
-          <div className="content">
+          <div className="content col-10" style={{marginTop: '0px'}}>
     
                   <DsDetails data={currentData}></DsDetails>
     
         
           
           </div>
+
+          <FootItem></FootItem>
           </div>
     
     );

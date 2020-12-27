@@ -12,6 +12,7 @@ import ShopOj from '../../images/ShopOj.png';
 import Uri from '../../images/Uri.png';
 import LeetCode from '../../images/LeetCode.png';
 import Uva from '../../images/Uva.png';
+import FootItem from '../FootItem/FootItem';
 
 const ProgrammingSiteDetail = () => {
 
@@ -72,6 +73,8 @@ const ProgrammingSiteDetail = () => {
             {
                data.map(d=><div className='col-3'><ProgrammingSiteDetailInner d={d}></ProgrammingSiteDetailInner></div>)
             }
+
+            <FootItem></FootItem>
 
 
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import FootItem from '../FootItem/FootItem';
 import FullCard from '../FullCard/FullCard';
 
 const DataStructure = () => {
@@ -51,13 +52,21 @@ const DataStructure = () => {
 
   
     return (
+
+        <div>
         <div className='container'>
            
 
            {
                  dsAllData.map(data=><FullCard data={data}></FullCard>)
              }
+
+             
          
+        </div>
+
+        <FootItem></FootItem>
+
         </div>
     );
 };

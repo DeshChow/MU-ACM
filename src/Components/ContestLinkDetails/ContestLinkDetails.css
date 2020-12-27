@@ -1,0 +1,18 @@
+button.postbtn{
+    border: 1px solid #fa3e3e;
+    padding: 4px 14px;
+    background-color: #fa3e3e;
+    color: black;
+    flex: right;
+    font-weight: 400;
+    cursor: pointer;
+    font-family: tahoma;
+    border-radius: 50px;
+    height: 35px;
+    width: 150px;
+    margin-left: 20px;
+  }
+
+  button.postbtnbtn:focus{
+    outline: none !important;
+ }

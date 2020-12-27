@@ -1,8 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 import ContestLink from '../ContestLink/ContestLink';
+import FootItem from '../FootItem/FootItem';
 import Header from '../Header/Header';
-
+import {AiOutlineLine} from "react-icons/ai";
 import HomeCard from '../HomeCard/HomeCard';
 import Memory from '../Memory/Memory';
 import ProgrammingSite from '../ProgrammingSite/ProgrammingSite';
@@ -78,19 +79,26 @@ const Home = () => {
 
     return (
 
-        <>
+        <div>
 
             <Header></Header>
 
+            <br></br>
+
             <div>
-                <div style={{ padding: '0px 20px' }}>
-                    <h1 style={{ textAlign: 'center' }}>Data Structure</h1>
+                <div>
+                    <h1 style={{ textAlign: 'center',fontFamily: "cursive" }}>Data Structure</h1>
+                    <div className="row" >  
+           <AiOutlineLine size="2rem" style={{marginLeft: "715px",color: '#4A0363'}}></AiOutlineLine>
+           <AiOutlineLine size="2rem" style={{marginLeft: "10px",color: 'tomato'}}></AiOutlineLine>
+           <AiOutlineLine size="2rem" style={{marginLeft: "10px",color: 'green'}}></AiOutlineLine>
+           </div>
 
 
-                    <a onClick={() => handleClick('dataStructure')} href='' style={{ float: 'right' }}><b>see all</b></a>
+                    <a onClick={() => handleClick('dataStructure')}  style={{ float: 'right',marginTop: '-30px' }}><b style={{marginLeft: '-70px',cursor: 'pointer'}}>see all</b></a>
                 </div>
 
-                <br />
+              
 
 
 
@@ -99,15 +107,17 @@ const Home = () => {
             </div>
 
             <div>
-                <div style={{ padding: '0px 20px' }}>
-                    <h1 style={{ textAlign: 'center' }}>Algorithm</h1>
+                <div >
+                    <h1 style={{ textAlign: 'center',fontFamily: "cursive" }}>Algorithm</h1>
+                    <div className="row" >  
+           <AiOutlineLine size="2rem" style={{marginLeft: "715px",color: '#4A0363'}}></AiOutlineLine>
+           <AiOutlineLine size="2rem" style={{marginLeft: "10px",color: 'tomato'}}></AiOutlineLine>
+           <AiOutlineLine size="2rem" style={{marginLeft: "10px",color: 'green'}}></AiOutlineLine>
+           </div>
 
-
-                    <a onClick={() => handleClick('algorithm')} href='' style={{ float: 'right' }}><b>see all</b></a>
+                 
+                    <a onClick={() => handleClick('algorithm')}  style={{ float: 'right',marginTop: '-30px' }}><b style={{marginLeft: '-70px',cursor: 'pointer'}}>see all</b></a>
                 </div>
-
-                <br />
-
 
 
                 <HomeCard data={algoData}></HomeCard>
@@ -132,14 +142,14 @@ const Home = () => {
 
 </div>
 
-   <h1>Footer</h1>
+   <FootItem></FootItem>
 
 
 
 
 
 
-        </>
+        </div>
 
 
     );

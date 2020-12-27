@@ -1,4 +1,5 @@
 import React from 'react';
+import FootItem from '../FootItem/FootItem';
 import FullCard from '../FullCard/FullCard';
 
 const Algorithm = () => {
@@ -51,10 +52,16 @@ const Algorithm = () => {
 
 
     return (
+
+        <div>
         <div className='container'>
             {
                  algoAllData.map(data=><FullCard data={data}></FullCard>)
              }
+        </div>
+
+        <FootItem></FootItem>
+
         </div>
     );
 };

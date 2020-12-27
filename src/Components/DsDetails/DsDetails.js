@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './DsDetails.css'
 
 const DsDetails = (props) => {
@@ -7,10 +8,14 @@ const DsDetails = (props) => {
 
     //console.log(data.Description2);
 
+    const {code}=props.data[0];
+
     console.log(data);
 
     return (
-        <div>
+
+       
+        <div style={{marginLeft: '70px'}}>
             <h1>{data.Header}</h1>
             <br></br>
             <p>{data.Introduction}</p>
@@ -26,18 +31,18 @@ const DsDetails = (props) => {
             <p>{data.Description4}</p>
            
             <p>{data.Description5}</p>
-            
-            <div className="code">
-                <p>This is shojib</p>
 
-            </div>
-            <p>{data.Complexity}</p>
+           <pre style={{backgroundColor:'#e0e0e0', width: '100%',paddingTop:'10px',paddingBottom:'10px',paddingLeft:'10px'}}>
+             {
+                 code
+             }
 
-
-          
-
+           </pre>
+          <br/>
          
         </div>
+
+      
     );
 };
 
