@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import { UserContext } from '../../App';
+import {BsDot} from "react-icons/bs";
 import DsDetails from '../DsDetails/DsDetails';
 import FootItem from '../FootItem/FootItem';
 import './Details.css';
@@ -49,19 +50,19 @@ const Details = (props) => {
 
         
         <div className="col-2" style={{backgroundColor: 'rgb(224, 224, 224)',height: '600px'}}>
-        <a><h2 style={{backgroundColor: '#4CAF50', color: 'white',width: '242px'}}>Data Structure</h2></a>
-        <a className="sidename" onClick={()=>handleClick('array')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Array</h4></a>
+        <a><h2 style={{backgroundColor: '#4CAF50', color: 'white',width: '242px',textAlign: 'center'}}>Data Structure</h2></a>
+        <a className="sidename" onClick={()=>handleClick('array')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}><BsDot/>Array</h4></a>
   
   
-        <a className="sidename"  onClick={()=>handleClick('stack')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Stack</h4></a>
+        <a className="sidename"  onClick={()=>handleClick('stack')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}><BsDot/>Stack</h4></a>
        
        
-        <a className="sidename"  onClick={()=>handleClick('queue')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Queue</h4></a>
+        <a className="sidename"  onClick={()=>handleClick('queue')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}><BsDot/>Queue</h4></a>
        
-        <a className="sidename" onClick={()=>handleClick('linkedlist')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Linked List</h4></a>
+        <a className="sidename" onClick={()=>handleClick('linkedlist')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}><BsDot/>Linked List</h4></a>
       
      
-        <a className="sidename" onClick={()=>handleClick('graph')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}>Graph</h4></a>
+        <a className="sidename" onClick={()=>handleClick('graph')}><h4 style={{marginLeft: '15px',cursor:'pointer'}}><BsDot/>Graph</h4></a>
        
         
       </div>

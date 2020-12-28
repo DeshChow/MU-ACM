@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import ContestLink from '../ContestLink/ContestLink';
 import FootItem from '../FootItem/FootItem';
 import Header from '../Header/Header';
@@ -7,6 +7,7 @@ import {AiOutlineLine} from "react-icons/ai";
 import HomeCard from '../HomeCard/HomeCard';
 import Memory from '../Memory/Memory';
 import ProgrammingSite from '../ProgrammingSite/ProgrammingSite';
+import { FaWindows } from 'react-icons/fa';
 
 
 const Home = () => {
@@ -71,9 +72,15 @@ const Home = () => {
 
     const history = useHistory();
 
+
+
     const handleClick = (str) => {
 
+       
+
         history.push('/' + str);
+
+        
 
     }
 

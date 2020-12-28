@@ -25,7 +25,7 @@ const FootItem = () => {
                <span  style={{ 'fontFamily': 'cursive', 'fontSize': '3rem'}}><b className="logg">MU</b><b>-ACM</b></span>
             <br></br>
             <br></br>
-                <p style={{ textAlign: 'justify'}}>Our mission is to continually raise the bar of the customer experience by using the internet and technology to help consumers find, discover and buy anything, and empower businesses and content creators to maximise their success. We aim to be Earth's most customer centric company.</p>
+                <p style={{ textAlign: 'justify'}}>Metropolitan University has a great environment for ACM ICPC.Because ACM strengthens the profession's collective voice through strong leadership, promotion of the highest standards, and recognition of technical excellence. ACM supports the professional growth of its members by providing opportunities for life-long learning, career development, and professional networking.</p>
                 <br></br>
                 <br></br>
 
@@ -76,7 +76,7 @@ const FootItem = () => {
                 </li>
             </ul>
             <div class="b-footer">
-                <p>
+                <p style={{marginTop: '-40px'}}>
                     All rights reserved by ©MU-ACM 2020 </p>
             </div>
         </footer>
